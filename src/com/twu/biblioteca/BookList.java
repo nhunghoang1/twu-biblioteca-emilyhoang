@@ -9,11 +9,13 @@ public class BookList {
 
     public BookList() {
         this.bookList = new ArrayList<Book>();
-    }
+        Book book1 = new Book("Learn to program", "Chris", 2000);
+        Book book2 = new Book("Ruby", "Pattrick asdfasd", 2009);
+        Book book3 = new Book("Java", "Kat", 2005);
 
-    public ArrayList addBook(Book book) {
-        this.bookList.add(book);
-        return this.bookList;
+        this.bookList.add(book1);
+        this.bookList.add(book2);
+        this.bookList.add(book3);
     }
 
     public void printBookList() {
@@ -21,4 +23,5 @@ public class BookList {
             book.print();
         }
     }
+
 }
