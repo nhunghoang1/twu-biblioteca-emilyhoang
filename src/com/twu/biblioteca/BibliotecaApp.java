@@ -12,15 +12,14 @@ public class BibliotecaApp {
         Menu.reader();
 
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        int line = 0;
+        int line = 9;
 
+        while (line != 0)
         try {
             line = Integer.parseInt(reader.readLine());
 
             Menu menu = new Menu();
             menu.chooseOptions(line);
-
-            reader.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
