@@ -10,8 +10,9 @@ public class Menu {
         if (line == 1) {
             BookList bookList = new BookList();
             bookList.printBookList();
-        } else {
-            System.out.println("Sorry, something went wrong.");
+        }
+        else {
+            System.out.println("Please select a valid option!");
         }
     }
 }
