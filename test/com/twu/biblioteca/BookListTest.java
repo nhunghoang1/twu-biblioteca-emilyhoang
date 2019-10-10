@@ -15,7 +15,7 @@ public class BookListTest {
     public void addBook() {
         BookList bookList = new BookList();
 
-        Book book = new Book("Learn to Program");
+        Book book = new Book("Learn to Program", "Chris", 2000);
 
     }
 }

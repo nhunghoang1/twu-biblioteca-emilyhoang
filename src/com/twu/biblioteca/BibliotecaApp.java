@@ -7,9 +7,9 @@ public class BibliotecaApp {
         System.out.println("Welcome to Biblioteca. Your one-stop-shop for great book titles in Bangalore!");
 
         BookList bookList = new BookList();
-        Book book1 = new Book("Learn to program");
-        Book book2 = new Book("Ruby");
-        Book book3 = new Book("Java");
+        Book book1 = new Book("Learn to program", "Chris", 2000);
+        Book book2 = new Book("Ruby", "Pattrick asdfasd", 2009);
+        Book book3 = new Book("Java", "Kat", 2005);
 
         bookList.addBook(book1);
         bookList.addBook(book2);
