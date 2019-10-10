@@ -9,8 +9,9 @@ public class BookList {
 
     public BookList() {
         this.bookList = new ArrayList<Book>();
+
         Book book1 = new Book("Learn to program", "Chris", 2000);
-        Book book2 = new Book("Ruby", "Pattrick asdfasd", 2009);
+        Book book2 = new Book("Ruby", "Patrick", 2009);
         Book book3 = new Book("Java", "Kat", 2005);
 
         this.bookList.add(book1);
@@ -19,9 +20,11 @@ public class BookList {
     }
 
     public void printBookList() {
-        for(Book book : this.bookList) {
-            book.print();
-        }
+            for(int index = 0; index < this.bookList.size(); index++) {
+                if (this.bookList.get(index).isCheckedOut()) {
+                    this.bookList.remove(index);
+                } else
+                    this.bookList.get(index).print();
+            }
     }
-
 }

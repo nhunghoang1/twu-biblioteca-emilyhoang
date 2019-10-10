@@ -16,6 +16,5 @@ public class BookListTest {
         BookList bookList = new BookList();
 
         Book book = new Book("Learn to Program", "Chris", 2000);
-
     }
 }

@@ -25,4 +25,18 @@ public class BookTest {
 
         assertEquals(2000, book.getYear());
     }
+
+    @Test
+    public void isCheckedOut() {
+        Book book = new Book("Learn to program", "Chris", 2000);
+
+        assertEquals(false, book.isCheckedOut());
+    }
+
+    @Test
+    public void checkOut() {
+        Book book = new Book("Learn to program", "Chris", 2000);
+
+        assertEquals(true, book.checkOut());
+    }
 }
