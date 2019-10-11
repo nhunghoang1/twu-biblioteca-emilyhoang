@@ -1,6 +1,7 @@
 package com.twu.biblioteca;
 
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class Menu {
     public static void reader() {
@@ -19,7 +20,19 @@ public class Menu {
             System.out.println("Please enter a book tittle");
 
             String userInput = myObj.nextLine();
-            System.out.println("Thank you! Enjoy the book");
+            BookList bookList = new BookList();
+            boolean foundBook = false;
+
+            for(int index = 0; index < bookList.bookList.size(); index++) {
+                if (bookList.bookList.get(index).matchTitle(userInput)) {
+                    System.out.println("Thank you! Enjoy the book");
+                    foundBook = true;
+                    break;
+                }
+            }
+            if (foundBook == false) {
+                System.out.println("Sorry, that book is not available");
+            }
         }
         else if (line == 0) {
             // the application will quit

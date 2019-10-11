@@ -9,7 +9,7 @@ public class BookTest {
     public void getTitle() {
         Book book = new Book("Learn to program", "Chris", 2000);
 
-        assertEquals("Learn to program", book.getTittle());
+        assertEquals("Learn to program", book.getTitle());
     }
 
     @Test

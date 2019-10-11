@@ -13,7 +13,7 @@ public class Book {
         this.checkedOut = false;
     }
 
-    public String getTittle() {
+    public String getTitle() {
 
         return title;
     }
@@ -40,7 +40,15 @@ public class Book {
         }
     }
 
+    public boolean matchTitle(String userInput) {
+        if (userInput.equals(getTitle())) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     public void print() {
-        System.out.printf("%-50.50s %-20s %-5.5s%n", this.getTittle(), this.getAuthor(), this.getYear());
+        System.out.printf("%-50.50s %-20s %-5.5s%n", this.getTitle(), this.getAuthor(), this.getYear());
     }
 }
