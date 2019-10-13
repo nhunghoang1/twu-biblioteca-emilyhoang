@@ -37,6 +37,9 @@ public class BookTest {
     public void checkOut() {
         Book book = new Book("Learn to program", "Chris", 2000);
 
-        assertEquals(true, book.checkOut());
+        boolean checkoutResult = book.checkOut();
+
+        assertEquals(true, checkoutResult);
+        assertEquals(true, book.isCheckedOut());
     }
 }

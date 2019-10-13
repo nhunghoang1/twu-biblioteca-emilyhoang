@@ -5,6 +5,18 @@ import static org.junit.Assert.assertTrue;
 
 
 public class BookListTest {
+
+    // junit , assertThat, is()
+    // mockito, mock
+    // shell : z-zsh, fasd
+    // zsh-autosuggestions
+
+    // BookController
+
+    // BookService
+
+
+
     @Test
     public void BookList() {
         BookList bookList = new BookList();

@@ -1,5 +1,7 @@
 package com.twu.biblioteca;
 
+import java.util.Scanner;
+
 public class Book {
     public String title;
     public String author;
@@ -33,22 +35,24 @@ public class Book {
     }
 
     public boolean checkOut() {
-        if (this.checkedOut) {
-            return false;
-        }else {
-            return true;
-        }
+        this.checkedOut = true;
+        return this.checkedOut;
+    }
+
+    public boolean checkIn(){
+        this.checkedOut = false;
+        return this.checkedOut;
     }
 
     public boolean matchTitle(String userInput) {
-        if (userInput.equals(getTitle())) {
+        if (userInput.equals(this.getTitle())) {
             return true;
-        } else {
+        }else {
             return false;
         }
     }
 
     public void print() {
-        System.out.printf("%-50.50s %-20s %-5.5s%n", this.getTitle(), this.getAuthor(), this.getYear());
+        System.out.printf("%30s %-50.50s %-20s %-5.5s%n", this.isCheckedOut(), this.getTitle(), this.getAuthor(), this.getYear());
     }
 }

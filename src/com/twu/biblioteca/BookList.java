@@ -18,12 +18,20 @@ public class BookList {
         this.bookList.add(book3);
     }
 
-    public void printBookList() {
-            for(int index = 0; index < this.bookList.size(); index++) {
-                if (this.bookList.get(index).isCheckedOut()) {
-                    this.bookList.remove(index);
-                } else
-                    this.bookList.get(index).print();
+    public void getCheckedOutBooks() {
+        for(Book book : this.bookList) {
+            if (book.isCheckedOut()) {
+                book.print();
             }
+        }
+    }
+
+    public void printBookList() {
+        for(Book book : this.bookList) {
+            if(!book.isCheckedOut()) {
+                book.print();
+            }
+        }
     }
 }
+
