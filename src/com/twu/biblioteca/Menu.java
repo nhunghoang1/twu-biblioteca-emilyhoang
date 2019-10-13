@@ -46,16 +46,21 @@ public class Menu {
 
             Scanner myObj = new Scanner(System.in);
             String userInput = myObj.nextLine();
+            boolean foundBook = false;
 
             for(int index = 0; index < this.bookList.bookList.size(); index++) {
                 if (this.bookList.bookList.get(index).matchTitle(userInput)) {
                     this.bookList.bookList.get(index).checkIn();
+                    foundBook = true;
 
                     System.out.println("Thank you for returning the book.");
 
                     break;
                 }
+            }if (!foundBook) {
+                System.out.println("That is not a valid book to return");
             }
+
         } else if (line == 0) {
             // the application will quit
         }

@@ -53,6 +53,6 @@ public class Book {
     }
 
     public void print() {
-        System.out.printf("%30s %-50.50s %-20s %-5.5s%n", this.isCheckedOut(), this.getTitle(), this.getAuthor(), this.getYear());
+        System.out.printf("%-50.50s %-20s %-5.5s%n", this.getTitle(), this.getAuthor(), this.getYear());
     }
 }
