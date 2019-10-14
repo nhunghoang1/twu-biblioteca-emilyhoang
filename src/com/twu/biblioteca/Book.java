@@ -1,5 +1,6 @@
 package com.twu.biblioteca;
 
+import java.io.PrintStream;
 import java.util.Scanner;
 
 public class Book {
@@ -52,7 +53,7 @@ public class Book {
         }
     }
 
-    public void print() {
-        System.out.printf("%-50.50s %-20s %-5.5s%n", this.getTitle(), this.getAuthor(), this.getYear());
+    public PrintStream print() {
+        return System.out.printf("%-50.50s %-20s %-5.5s%n", this.getTitle(), this.getAuthor(), this.getYear());
     }
 }

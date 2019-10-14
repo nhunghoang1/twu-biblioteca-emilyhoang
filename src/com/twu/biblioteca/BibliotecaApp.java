@@ -10,8 +10,8 @@ public class BibliotecaApp {
         System.out.println("Welcome to Biblioteca. Your one-stop-shop for great book titles in Bangalore!");
 
         Menu menu = new Menu();
-
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+
 
         int line = 9;
         while (line != 0)
